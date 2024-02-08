@@ -12,11 +12,11 @@ Before getting started, ensure that you have the following tools installed:
 ### Install Required Tools:
  - Oracle VM Virtualbox (https://www.virtualbox.org)
  - Vagrant (https://www.vagrantup.com)
- - Gitbash (https://git-scm.com)
+ - Homebrew (https://brew.sh)
 
 ## Flow of execution:
 1. Clone source code
-2. Cd into vagrant dir
+2. cd into vagrant dir
 3. Bring up vms
 4. Validate 
 5. Setup all the services 
