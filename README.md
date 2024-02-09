@@ -11,17 +11,17 @@ For the automation stack
 Vagrant will be used to automate the vm and this will achieved by vagrant communicating with virtual box and then use bash script to set up our services.
 
 ### Flow of execution:
-Clone source code
-Cd into vagrant dir
-Bring up vms
-Validate 
-Setup all the services 
-	- NGINX
-	- Memcached
-	- RabbitMQ
-	- Tomcat
-	- App build and deploy
-Verify from browser 
+1. Clone source code
+2. cd into vagrant dir
+3. Bring up vms
+4. Validate 
+5. Setup all the services 
+ - NGINX
+ - Memcached
+ - RabbitMQ
+ - Tomcat
+ - App build and deploy
+ - Verify from browser 
 
 
 ## Prerequisites
