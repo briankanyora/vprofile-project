@@ -1,5 +1,7 @@
 Login to the Memcache vm
+```
 $ vagrant ssh mc01
+```
 Verify Hosts entry, if entries missing update the it with IP and hostnames
 ```
 # cat /etc/hosts
