@@ -23,3 +23,25 @@ Change dir to /tmp
 ```
 # cd /tmp/
 ```
+Download & Tomcat Package
+```
+# wget https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.75/bin/apache-tomcat-9.0.75.tar.gz
+# tar xzvf apache-tomcat-9.0.75.tar.gz
+```
+Add tomcat user
+```
+# useradd --home-dir /usr/local/tomcat --shell /sbin/nologin tomcat
+```
+Copy data to tomcat home dir
+```
+# cp -r /tmp/apache-tomcat-9.0.75/* /usr/local/tomcat/
+```
+Make tomcat user owner of tomcat home dir
+```
+# chown -R tomcat.tomcat /usr/local/tomcat
+```
+Setup systemctl command for tomcat
+Create tomcat service file
+```
+# vi /etc/systemd/system/tomcat.service
+```
