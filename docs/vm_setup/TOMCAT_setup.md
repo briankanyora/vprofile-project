@@ -45,3 +45,21 @@ Create tomcat service file
 ```
 # vi /etc/systemd/system/tomcat.service
 ```
+Update the file with below content
+```
+[Unit]
+Description=Tomcat
+After=network.target
+[Service]
+User=tomcat
+WorkingDirectory=/usr/local/tomcat
+Environment=JRE_HOME=/usr/lib/jvm/jre
+Environment=JAVA_HOME=/usr/lib/jvm/jre
+Environment=CATALINA_HOME=/usr/local/tomcat
+Environment=CATALINE_BASE=/usr/local/tomcat
+ExecStart=/usr/local/tomcat/bin/catalina.sh run
+ExecStop=/usr/local/tomcat/bin/shutdown.sh
+SyslogIdentifier=tomcat-%i
+[Install]
+WantedBy=multi-user.target
+```
