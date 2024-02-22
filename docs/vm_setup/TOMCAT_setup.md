@@ -63,3 +63,20 @@ SyslogIdentifier=tomcat-%i
 [Install]
 WantedBy=multi-user.target
 ```
+Reload systemd files
+```
+# systemctl daemon-reload
+```
+Start & Enable service
+```
+# systemctl start tomcat
+# systemctl enable tomcat
+```
+Enabling the firewall and allowing port 8080 to access the tomcat
+```
+# systemctl start firewalld
+# systemctl enable firewalld
+# firewall-cmd --get-active-zones
+# firewall-cmd --zone=public --add-port=8080/tcp --permanent
+# firewall-cmd --reload
+```
